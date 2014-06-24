@@ -22,9 +22,19 @@ module.exports = function(grunt) {
              var expression = body.expression;
              if( isKissy( expression ) ) {
                  var addArguments = expression.arguments;
-                 if( addArguments[0].type == "Literal" && addArguments[0].value == name ){
+                 if( addArguments[0].type == "Literal" ){
                      //第一个为Literal的话，说明是已经有写moduleName
-                     //而且手动填写的moduleName 和 计算的吻合。
+                     if( addArguments[0].value == name ){
+                         //如果moduleName和计算的不吻合，已计算的为主
+
+                         addArguments.shift();
+
+                         addArguments.unshift({
+                             type  : 'Literal',
+                             value : name
+                         });
+
+                     }
 
                  } else {
                      addArguments.unshift({
