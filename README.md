@@ -1,4 +1,4 @@
-# grunt-auto-kissy-module-name@0.1.4
+# grunt-auto-kissy-module-name@0.1.6
 
 > 在编写一个kissy模块的时候，每次都要KISSY.add("在这里把模块所在的路径敲一遍")，很无聊有么有，但是呢生产环境却又确实有必要有这个moduleName，combine需要，性能优化的需要，关乎性能的问题在前端都是大问题！所以......
 
