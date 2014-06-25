@@ -45,7 +45,14 @@ grunt.initConfig({
     }
   }
 });
+
+一般都是在copy到目标目录（build）之后先执行autoname
+
+grunt.registerTask('build', ['clean:build', 'copy' , 'autoname', 'combine', 'uglify', 'cssmin']);
+
+
 ```
+
 
 ## Release History
 _(Nothing yet)_
