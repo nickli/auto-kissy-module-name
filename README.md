@@ -1,4 +1,4 @@
-# grunt-auto-kissy-module-name@0.1.3
+# grunt-auto-kissy-module-name@0.1.4
 
 > 在编写一个kissy模块的时候，每次都要KISSY.add("在这里把模块所在的路径敲一遍")，很无聊有么有，但是呢生产环境却又确实有必要有这个moduleName，combine需要，性能优化的需要，关乎性能的问题在前端都是大问题！所以......
 
@@ -31,19 +31,19 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-auto-kissy-module-name');
 ```
 
-## The "auto_kissy_module_name" task
+## The "autoname" task
 
 ### Overview
-In your project's Gruntfile, add a section named `auto_kissy_module_name` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `autoname` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  auto_kissy_module_name: {
+  autoname: {
     build: {
       // targetDir,要执行的目标目录，一般为打包的build目录
       targetDir : "./build"
     }
-  },
+  }
 });
 ```
 
